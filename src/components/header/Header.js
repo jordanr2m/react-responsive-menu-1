@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Header.css"
 
-// Could rename this to Hero Img. Better description
+// Could rename this to Hero section. Better description
 const Header = () => {
   return (
     <section className='welcome --center-all'>
