@@ -1,9 +1,12 @@
-import React from 'react'
+import { useState } from 'react'
 import "./Navbar.css"
 import { AiOutlineRocket, AiOutlineBars } from "react-icons/ai";
 import { RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
+  // Hide mobile menu icon initially
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <nav className='container navbar'>
       {/* Create nice inline logo img */}

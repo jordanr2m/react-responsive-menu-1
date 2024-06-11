@@ -68,3 +68,27 @@ a.btn-orange:hover {
 .navbar .menu-icons {
     display: none;
 }
+
+
+/* Media query to hide Get Started button on small screens */
+@media screen and (max-width: 769px) {
+    .nav-btn {
+        display: none;
+    }
+}
+
+/* Media query for mobile width */
+@media screen and (max-width: 600px) {
+    .nav-btn {
+        display: block; /* show orange button */
+    }
+
+    .nav-links {
+        display: none; /* Hide top menu on mobile */
+        border: 2px solid #fff;
+    }
+
+    .navbar .menu-icons {
+        display: block; /* show hamburger icon */
+    }
+}
