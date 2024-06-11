@@ -7,6 +7,10 @@ const Navbar = () => {
   // Hide mobile menu icon initially
   const [showMenu, setShowMenu] = useState(false);
 
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  } 
+
   return (
     <nav className='container navbar'>
       {/* Create nice inline logo img */}
@@ -25,9 +29,13 @@ const Navbar = () => {
         </ul>
       </menu>
 
-      {/* Div to hold hamburger icon and close icon */}
-      <div className='menu-icons'>
-        <AiOutlineBars color="fff" size={27} />
+      {/* Div to hold hamburger icon and close icon. Use logic to see which icon to display & toggle on click */}
+      <div className='menu-icons' onClick={toggleMenu}>
+        {showMenu  ? (
+          <RiCloseLine color="fff" size={27}/>
+        ) : (
+          <AiOutlineBars color="fff" size={27} />
+        )}
       </div>
     </nav>
   )

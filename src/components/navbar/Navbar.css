@@ -90,5 +90,6 @@ a.btn-orange:hover {
 
     .navbar .menu-icons {
         display: block; /* show hamburger icon */
+        cursor: pointer;
     }
 }
