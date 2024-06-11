@@ -20,7 +20,8 @@ const Navbar = () => {
       </div>
 
       <menu>
-        <ul className='nav-links'>
+        {/* Use id property to show or hide the mobile menu */}
+        <ul className='nav-links' id={showMenu ? "mobile-nav-links" : "hide-mobile-nav-links"}>
           <li><a href="#">Home</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Download</a></li>

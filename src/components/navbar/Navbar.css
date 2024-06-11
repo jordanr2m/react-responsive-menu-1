@@ -92,4 +92,33 @@ a.btn-orange:hover {
         display: block; /* show hamburger icon */
         cursor: pointer;
     }
+
+    /* Styles for when mobile nav is hidden and show are the same. Only the positioning makes them different */
+    .navbar #mobile-nav-links,
+    .navbar #hide-mobile-nav-links {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 8rem;
+        width: 100%;
+        background-color: var(--dark-blue);
+        padding-bottom: 5px;
+        transition: all 0.3s;
+        z-index: 111; /* set on top of everything */
+    }
+
+    .navbar #mobile-nav-links li,
+    .navbar #hide-mobile-nav-links li {
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #fff;
+        margin: 0 3rem;
+    }
+
+    /* Get rid of the border on last list itmem */
+    .navbar #mobile-nav-links li:last-child,
+    .navbar #hide-mobile-nav-links li:last-child {
+        border-bottom: none;
+        margin-top: 0.5rem;
+    }
 }
