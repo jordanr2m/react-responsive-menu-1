@@ -11,6 +11,11 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   } 
 
+  // Use this function to hide menu after a link is clicked
+  const hideMenu = () => {
+    setShowMenu(false);
+  } 
+
   return (
     <nav className='container navbar'>
       {/* Create nice inline logo img */}
@@ -21,12 +26,13 @@ const Navbar = () => {
 
       <menu>
         {/* Use id property to show or hide the mobile menu */}
+        {/* When a link is clicked, hide the mobile menu */}
         <ul className='nav-links' id={showMenu ? "mobile-nav-links" : "hide-mobile-nav-links"}>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Download</a></li>
-          <li><a href="#">Subscribe</a></li>
-          <li className='nav-btn'><a className="btn btn-orange" href="#">Get Started</a></li>
+          <li onClick={hideMenu}><a href="#">Home</a></li>
+          <li onClick={hideMenu}><a href="#">Features</a></li>
+          <li onClick={hideMenu}><a href="#">Download</a></li>
+          <li onClick={hideMenu}><a href="#">Subscribe</a></li>
+          <li onClick={hideMenu} className='nav-btn'><a className="btn btn-orange" href="#">Get Started</a></li>
         </ul>
       </menu>
 
