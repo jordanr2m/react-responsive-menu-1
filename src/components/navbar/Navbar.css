@@ -107,6 +107,36 @@ a.btn-orange:hover {
         z-index: 111; /* set on top of everything */
     }
 
+    /* Mobile nav links positioning */
+    .navbar #mobile-nav-links {
+        animation: slide-in 0.5s ease-in-out;
+    }
+
+    /* Mobile nav links positioning */
+    .navbar #hide-mobile-nav-links {
+        left: -100%; /* makes it so that it is off page to begin with */
+        /* animation: slide-out 0.5s ease-in-out; */
+    }
+
+    @keyframes slide-in {
+        0% {
+            transform: translateX(-100%); /* off page to the left */
+        }
+        100% {
+            transform: translateX(0); /* move back onto screen */
+        }
+    }
+
+    /* Instructor got rid of slide-out animation */
+    /* @keyframes slide-out {
+        0% {
+            transform: translateX(0); /* off page to the left */
+        /* }
+        100% {
+            transform: translateX(-100%); /* move back onto screen */
+       /* }
+    } */
+
     .navbar #mobile-nav-links li,
     .navbar #hide-mobile-nav-links li {
         text-align: center;
