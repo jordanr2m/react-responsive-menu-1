@@ -98,18 +98,19 @@ a.btn-orange:hover {
     .navbar #hide-mobile-nav-links {
         display: block;
         position: absolute;
-        left: 0;
+        /* left: 0; */
         top: 8rem;
         width: 100%;
         background-color: var(--dark-blue);
         padding-bottom: 5px;
-        transition: all 0.3s;
+        transition: all 0.3s; /* applies to left property to create smooth animation (without needing keyframes) */
         z-index: 111; /* set on top of everything */
     }
 
     /* Mobile nav links positioning */
     .navbar #mobile-nav-links {
-        animation: slide-in 0.5s ease-in-out;
+        left: 0;
+        /* animation: slide-in 0.5s ease-in-out; */
     }
 
     /* Mobile nav links positioning */
@@ -118,16 +119,16 @@ a.btn-orange:hover {
         /* animation: slide-out 0.5s ease-in-out; */
     }
 
-    @keyframes slide-in {
+    /* Instructor got rid of animations & it still works */
+    /* @keyframes slide-in {
         0% {
             transform: translateX(-100%); /* off page to the left */
-        }
+       /* }
         100% {
             transform: translateX(0); /* move back onto screen */
-        }
-    }
+       /* }
+    } */
 
-    /* Instructor got rid of slide-out animation */
     /* @keyframes slide-out {
         0% {
             transform: translateX(0); /* off page to the left */
